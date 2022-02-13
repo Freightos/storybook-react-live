@@ -43,5 +43,17 @@ All props accepted by [\<LiveProvider /\>](https://github.com/FormidableLabs/rea
 |editorStyle|PropTypes.object| Styles object for overriding editor styles
 |errorStyles|PropTypes.object| Styles object for overriding error styles
 
+## Extend globally via `.storybook/preview.js`
+
+Add property `reactLive` to `parameters` object. Accepts: `scope` and `theme`
+
+```js
+export const parameters = {
+  reactLive: {
+    scope: { Button, Icon },
+    theme: synthwave84
+  },
+};
+```
 
 :)

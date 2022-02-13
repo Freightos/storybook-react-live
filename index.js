@@ -16,14 +16,27 @@ export default function withLiveEdit({
   },
   ...rest
 }) {
-  const mergedScope = {
-    React,
-    ...scope,
-  };
+  return function LiveEditComponent(story, context) {
+    const mergedScope = {
+      React,
+      ...scope,
+      ...context.parameters.reactLive?.scope,
+    };
 
-  return function LiveEditComponent() {
+    if (context.parameters.reactLive?.debug) {
+      console.log('--- [ storybook-react-live DEBUG ] --- ', {
+        story,
+        context,
+      });
+    }
+
     return (
-      <LiveProvider theme={theme} code={code} scope={mergedScope} {...rest}>
+      <LiveProvider
+        theme={context.parameters.reactLive?.theme || theme}
+        code={code}
+        scope={mergedScope}
+        {...rest}
+      >
         <LivePreview />
         {!errorOnTop && <LiveError style={errorStyles} />}
         <LiveEditor style={editorStyle} />
