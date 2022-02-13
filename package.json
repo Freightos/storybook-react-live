@@ -2,8 +2,9 @@
   "name": "@freightos/storybook-addon-react-live",
   "version": "1.0.0",
   "description": "react-live addon for Storybook 6+",
-  "main": "index.js",
+  "main": "lib",
   "scripts": {
+    "build": "babel src/index.js -o lib/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,5 +24,10 @@
   "dependencies": {
     "react-element-to-jsx-string": "14.3.4",
     "react-live": "2.4.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.16.8",
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7"
   }
 }
