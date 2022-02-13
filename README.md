@@ -9,7 +9,7 @@
 ## Usage
 
 ```
-import withLiveEdit from 'freightos/storybook-addon-react-live';
+import withLiveEdit from '@freightos/storybook-addon-react-live';
 
 stories.add(
     'Live edit',
