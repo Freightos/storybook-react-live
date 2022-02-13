@@ -1,6 +1,6 @@
 {
   "name": "@freightos/storybook-addon-react-live",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "react-live addon for Storybook 6+",
   "main": "lib",
   "scripts": {
