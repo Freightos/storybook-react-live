@@ -1,6 +1,6 @@
 {
   "name": "@freightos/storybook-react-live",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "public": true,
   "description": "react-live decorator for Storybook 6+ | renders story as react-live",
   "main": "lib",
