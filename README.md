@@ -1,6 +1,6 @@
 # storybook-react-live
 
-[react-live](https://github.com/FormidableLabs/react-live) addon for [Storybook](https://storybook.js.org/) v6+
+[react-live](https://github.com/FormidableLabs/react-live) decorator for [Storybook](https://storybook.js.org/) v6+
 
 ## Installation
 

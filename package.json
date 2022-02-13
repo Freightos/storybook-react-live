@@ -6,12 +6,12 @@
   "main": "lib",
   "scripts": {
     "build": "babel index.js -o lib/index.js",
-    "prepublish": "npm run build",
+    "prepublishOnly": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Freightos/storybook-addon-react-live.git"
+    "url": "git+https://github.com/Freightos/storybook-react-live.git"
   },
   "keywords": [
     "storybook",
@@ -21,9 +21,9 @@
   "author": "Sasha Khamkov",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Freightos/storybook-addon-react-live/issues"
+    "url": "https://github.com/Freightos/storybook-react-live/issues"
   },
-  "homepage": "https://github.com/Freightos/storybook-addon-react-live#readme",
+  "homepage": "https://github.com/Freightos/storybook-react-live#readme",
   "dependencies": {
     "react-element-to-jsx-string": "^14.3.4",
     "react-live": "^2.4.1"
