@@ -1,15 +1,15 @@
-# storybook-addon-react-live
+# storybook-react-live
 
 [react-live](https://github.com/FormidableLabs/react-live) addon for [Storybook](https://storybook.js.org/) v6+
 
 ## Installation
 
-`npm i -D @freightos/storybook-addon-react-live`
+`npm i -D @freightos/storybook-react-live`
 
 ## Usage
 
 ```
-import withLiveEdit from '@freightos/storybook-addon-react-live';
+import withLiveEdit from '@freightos/storybook-react-live';
 
 stories.add(
     'Live edit',

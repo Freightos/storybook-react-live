@@ -1,7 +1,8 @@
 {
-  "name": "@freightos/storybook-addon-react-live",
+  "name": "@freightos/storybook-react-live",
   "version": "1.0.2",
-  "description": "react-live addon for Storybook 6+",
+  "public": true,
+  "description": "react-live decorator for Storybook 6+ | renders story as react-live",
   "main": "lib",
   "scripts": {
     "build": "babel index.js -o lib/index.js",
@@ -14,6 +15,7 @@
   },
   "keywords": [
     "storybook",
+    "decorator",
     "react-live"
   ],
   "author": "Sasha Khamkov",
@@ -23,13 +25,13 @@
   },
   "homepage": "https://github.com/Freightos/storybook-addon-react-live#readme",
   "dependencies": {
-    "react-element-to-jsx-string": "14.3.4",
-    "react-live": "2.4.1"
+    "react-element-to-jsx-string": "^14.3.4",
+    "react-live": "^2.4.1"
   },
   "devDependencies": {
-    "@babel/cli": "7.16.8",
+    "@babel/cli": "^7.16.8",
     "@babel/core": "^7.7.7",
     "@babel/preset-env": "^7.7.7",
-    "@babel/preset-react": "7.16.7"
+    "@babel/preset-react": "^7.16.7"
   }
 }
