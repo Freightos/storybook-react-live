@@ -25,7 +25,6 @@
   },
   "homepage": "https://github.com/Freightos/storybook-react-live#readme",
   "dependencies": {
-    "react-element-to-jsx-string": "^14.3.4",
     "react-live": "^2.4.1"
   },
   "devDependencies": {

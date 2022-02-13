@@ -1,51 +1,33 @@
 import React from 'react';
-import reactElementToJSXString from 'react-element-to-jsx-string';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
-import theme from 'prism-react-renderer/themes/dracula';
+import dracula from 'prism-react-renderer/themes/dracula';
 
-const defaultReactElementToJSXStringOptions = {
-  showDefaultProps: true,
-  showFunctions: true,
-};
-
-export default function withLiveEdit(code, providedScope, ops) {
-  const scope = {
+export default function withLiveEdit({
+  code,
+  scope,
+  theme = dracula,
+  errorOnTop = true,
+  editorStyle,
+  errorStyles = {
+    background: '#ff000040',
+    padding: '8px',
+    color: '#333',
+    borderRadius: '4px',
+  },
+  ...rest
+}) {
+  const mergedScope = {
     React,
-    ...providedScope,
+    ...scope,
   };
 
-  const options = {
-    jsxStringOptions: {},
-    noInline: false,
-    ...ops,
-  };
-
-  const editorCodeOptions = {
-    ...options.jsxStringOptions,
-    ...defaultReactElementToJSXStringOptions,
-  };
-
-  return function LiveEditComponent(storyFn) {
-    const editorCode =
-      code || reactElementToJSXString(storyFn(), editorCodeOptions);
-
+  return function LiveEditComponent() {
     return (
-      <LiveProvider
-        theme={theme}
-        code={editorCode}
-        scope={scope}
-        noInline={options.noInline}
-      >
+      <LiveProvider theme={theme} code={code} scope={mergedScope} {...rest}>
         <LivePreview />
-        <LiveError
-          style={{
-            background: '#ff000040',
-            padding: '8px',
-            color: '#333',
-            borderRadius: '4px',
-          }}
-        />
-        <LiveEditor />
+        {!errorOnTop && <LiveError style={errorStyles} />}
+        <LiveEditor style={editorStyle} />
+        {errorOnTop && <LiveError style={errorStyles} />}
       </LiveProvider>
     );
   };

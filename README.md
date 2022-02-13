@@ -2,35 +2,46 @@
 
 [react-live](https://github.com/FormidableLabs/react-live) decorator for [Storybook](https://storybook.js.org/) v6+
 
+![npm](https://img.shields.io/npm/v/@freightos/storybook-react-live)
+![NPM](https://img.shields.io/npm/l/@freightos/storybook-react-live)
+
+
 ## Installation
 
 `npm i -D @freightos/storybook-react-live`
 
 ## Usage
 
-```
+```jsx
 import withLiveEdit from '@freightos/storybook-react-live';
 
-stories.add(
-    'Live edit',
-    withLiveEdit(`
-() => (
+const code = `() => (
   <Center>
     <Button type="primary" size="large">
       Default
     </Button>
   </Center>
-)
-`, { Button } // context
-    )
+)`;
+
+stories.add(
+  'Live edit',
+  withLiveEdit({
+    code,
+    scope: { Button }
+  })
 )
 
 ```
 
-## Properties of `withLiveEdit()`
+## Props of `withLiveEdit()`
 
-`withLiveEdit(code, providedScope, ops)`
+All props accepted by [\<LiveProvider /\>](https://github.com/FormidableLabs/react-live#liveprovider-) and:
 
-- code: string
-- providedScope: object of components to inject as live scope, 
-- ops: object of live options
+|Name|PropType|Description|
+|---|---|---|
+|theme|PropTypes.object|A `prism-react-renderer` theme object. See more [here](https://github.com/FormidableLabs/prism-react-renderer#theming)
+|editorStyle|PropTypes.object| Styles object for overriding editor styles
+|errorStyles|PropTypes.object| Styles object for overriding error styles
+
+
+:)
