@@ -1,0 +1,27 @@
+{
+  "name": "storybook-addon-react-live",
+  "version": "1.0.0",
+  "description": "react-live addon for Storybook 6+",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Freightos/storybook-addon-react-live.git"
+  },
+  "keywords": [
+    "storybook",
+    "react-live"
+  ],
+  "author": "Sasha Khamkov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Freightos/storybook-addon-react-live/issues"
+  },
+  "homepage": "https://github.com/Freightos/storybook-addon-react-live#readme",
+  "dependencies": {
+    "react-element-to-jsx-string": "14.3.4",
+    "react-live": "2.4.1"
+  }
+}
