@@ -14,11 +14,17 @@
     "url": "git+https://github.com/Freightos/storybook-react-live.git"
   },
   "keywords": [
-    "storybook",
-    "react-live",
+    "storybook-addons",
     "code",
     "source"
+    "storybook",
+    "react-live",
+
   ],
+  "storybook": {
+    "displayName": "storybook react live",
+    "supportedFrameworks": ["react"]
+  }
   "author": "Sasha Khamkov",
   "license": "MIT",
   "bugs": {
